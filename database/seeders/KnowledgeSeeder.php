@@ -11,7 +11,9 @@ class KnowledgeSeeder extends Seeder {
      *
      * @return void
      */
-    public function run() {
+    public function run() 
+    {
+        //Synonym
         // --- 1. Eventos ---
         KnowledgeItem::create([
             'titulo' => 'Evento de Ingeniería 2025',
