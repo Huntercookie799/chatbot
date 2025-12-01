@@ -27,6 +27,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'taller', 'sinonimo' => 'workshop'],
             ['palabra' => 'taller', 'sinonimo' => 'curso'],
             ['palabra' => 'curso', 'sinonimo' => 'taller'],
+            // Nuevos sinónimos para Eventos y Actividades
+            ['palabra' => 'celebracion', 'sinonimo' => 'festejo'],
+            ['palabra' => 'jornada', 'sinonimo' => 'dia'],
+            ['palabra' => 'jornada', 'sinonimo' => 'sesion'],
+            ['palabra' => 'programa', 'sinonimo' => 'horario'],
+            ['palabra' => 'programa', 'sinonimo' => 'plan'],
 
             // --- INGENIERÍA Y TECNOLOGÍA ---
             ['palabra' => 'ingenieria', 'sinonimo' => 'ingenieril'],
@@ -39,6 +45,14 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'hardware', 'sinonimo' => 'computadora'],
             ['palabra' => 'computadora', 'sinonimo' => 'ordenador'],
             ['palabra' => 'computadora', 'sinonimo' => 'pc'],
+            // Nuevos sinónimos para Ingeniería y Tecnología
+            ['palabra' => 'aplicacion', 'sinonimo' => 'app'],
+            ['palabra' => 'aplicacion', 'sinonimo' => 'software'],
+            ['palabra' => 'sistema', 'sinonimo' => 'plataforma'],
+            ['palabra' => 'dispositivo', 'sinonimo' => 'aparato'],
+            ['palabra' => 'dispositivo', 'sinonimo' => 'terminal'],
+            ['palabra' => 'desarrollo', 'sinonimo' => 'programacion'],
+            ['palabra' => 'desarrollo', 'sinonimo' => 'creacion'],
 
             // --- PROBLEMAS Y SOLUCIONES ---
             ['palabra' => 'problema', 'sinonimo' => 'dificultad'],
@@ -53,6 +67,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'solucion', 'sinonimo' => 'solucionar'],
             ['palabra' => 'arreglar', 'sinonimo' => 'reparar'],
             ['palabra' => 'arreglar', 'sinonimo' => 'corregir'],
+            // Nuevos sinónimos para Problemas y Soluciones
+            ['palabra' => 'duda', 'sinonimo' => 'pregunta'],
+            ['palabra' => 'duda', 'sinonimo' => 'consulta'],
+            ['palabra' => 'arreglo', 'sinonimo' => 'reparacion'],
+            ['palabra' => 'solucionar', 'sinonimo' => 'resolver'],
+            ['palabra' => 'incidente', 'sinonimo' => 'problema'],
 
             // --- TIEMPO Y FECHAS ---
             ['palabra' => 'fecha', 'sinonimo' => 'dia'],
@@ -65,6 +85,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'urgente', 'sinonimo' => 'inmediato'],
             ['palabra' => 'urgente', 'sinonimo' => 'prioritario'],
             ['palabra' => 'pronto', 'sinonimo' => 'rapido'],
+            // Nuevos sinónimos para Tiempo y Fechas
+            ['palabra' => 'calendario', 'sinonimo' => 'agenda'],
+            ['palabra' => 'plazo', 'sinonimo' => 'fecha limite'],
+            ['palabra' => 'actual', 'sinonimo' => 'presente'],
+            ['palabra' => 'anterior', 'sinonimo' => 'pasado'],
+            ['palabra' => 'proximo', 'sinonimo' => 'siguiente'],
 
             // --- LUGARES Y UBICACIONES ---
             ['palabra' => 'lugar', 'sinonimo' => 'ubicacion'],
@@ -75,6 +101,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'oficina', 'sinonimo' => 'despacho'],
             ['palabra' => 'edificio', 'sinonimo' => 'construccion'],
             ['palabra' => 'edificio', 'sinonimo' => 'inmueble'],
+            // Nuevos sinónimos para Lugares y Ubicaciones
+            ['palabra' => 'campus', 'sinonimo' => 'recinto'],
+            ['palabra' => 'direccion', 'sinonimo' => 'ubicacion'],
+            ['palabra' => 'area', 'sinonimo' => 'zona'],
+            ['palabra' => 'piso', 'sinonimo' => 'planta'],
+            ['palabra' => 'entrada', 'sinonimo' => 'acceso'],
 
             // --- PERSONAS Y CONTACTOS ---
             ['palabra' => 'persona', 'sinonimo' => 'individuo'],
@@ -87,6 +119,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'estudiante', 'sinonimo' => 'educando'],
             ['palabra' => 'ayuda', 'sinonimo' => 'asistencia'],
             ['palabra' => 'ayuda', 'sinonimo' => 'soporte'],
+            // Nuevos sinónimos para Personas y Contactos
+            ['palabra' => 'contacto', 'sinonimo' => 'informacion de contacto'],
+            ['palabra' => 'contacto', 'sinonimo' => 'telefono'],
+            ['palabra' => 'personal', 'sinonimo' => 'empleado'],
+            ['palabra' => 'personal', 'sinonimo' => 'trabajador'],
+            ['palabra' => 'jefe', 'sinonimo' => 'supervisor'],
+            ['palabra' => 'jefe', 'sinonimo' => 'encargado'],
 
             // --- ACADÉMICO Y EDUCACIÓN ---
             ['palabra' => 'universidad', 'sinonimo' => 'universitario'],
@@ -100,6 +139,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'calificacion', 'sinonimo' => 'puntuacion'],
             ['palabra' => 'aprender', 'sinonimo' => 'estudiar'],
             ['palabra' => 'aprender', 'sinonimo' => 'instruirse'],
+            // Nuevos sinónimos para Académico y Educación
+            ['palabra' => 'grado', 'sinonimo' => 'titulo'],
+            ['palabra' => 'materia', 'sinonimo' => 'asignatura'],
+            ['palabra' => 'inscripcion', 'sinonimo' => 'registro'],
+            ['palabra' => 'investigacion', 'sinonimo' => 'estudio'],
+            ['palabra' => 'investigacion', 'sinonimo' => 'analisis'],
 
             // --- DOCUMENTOS Y ARCHIVOS ---
             ['palabra' => 'documento', 'sinonimo' => 'archivo'],
@@ -110,6 +155,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'formulario', 'sinonimo' => 'formularios'],
             ['palabra' => 'solicitud', 'sinonimo' => 'peticion'],
             ['palabra' => 'solicitud', 'sinonimo' => 'requerimiento'],
+            // Nuevos sinónimos para Documentos y Archivos
+            ['palabra' => 'manual', 'sinonimo' => 'guia'],
+            ['palabra' => 'credencial', 'sinonimo' => 'identificacion'],
+            ['palabra' => 'expediente', 'sinonimo' => 'registro'],
+            ['palabra' => 'copia', 'sinonimo' => 'ejemplar'],
+            ['palabra' => 'descarga', 'sinonimo' => 'bajar'],
 
             // --- SISTEMAS Y REDES ---
             ['palabra' => 'sistema', 'sinonimo' => 'plataforma'],
@@ -122,6 +173,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'contraseña', 'sinonimo' => 'password'],
             ['palabra' => 'contraseña', 'sinonimo' => 'clave'],
             ['palabra' => 'usuario', 'sinonimo' => 'username'],
+            // Nuevos sinónimos para Sistemas y Redes
+            ['palabra' => 'servidor', 'sinonimo' => 'server'],
+            ['palabra' => 'acceso', 'sinonimo' => 'login'],
+            ['palabra' => 'cuenta', 'sinonimo' => 'perfil'],
+            ['palabra' => 'navegador', 'sinonimo' => 'browser'],
+            ['palabra' => 'enlace', 'sinonimo' => 'link'],
 
             // --- ESTADOS Y CONDICIONES ---
             ['palabra' => 'activo', 'sinonimo' => 'activado'],
@@ -132,6 +189,11 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'completo', 'sinonimo' => 'finalizado'],
             ['palabra' => 'pendiente', 'sinonimo' => 'espera'],
             ['palabra' => 'pendiente', 'sinonimo' => 'proceso'],
+            // Nuevos sinónimos para Estados y Condiciones
+            ['palabra' => 'listo', 'sinonimo' => 'preparado'],
+            ['palabra' => 'disponible', 'sinonimo' => 'accesible'],
+            ['palabra' => 'agotado', 'sinonimo' => 'vendido'],
+            ['palabra' => 'agotado', 'sinonimo' => 'terminado'],
 
             // --- VERBOS COMUNES ---
             ['palabra' => 'buscar', 'sinonimo' => 'encontrar'],
@@ -144,6 +206,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'poder', 'sinonimo' => 'facultad'],
             ['palabra' => 'saber', 'sinonimo' => 'conocer'],
             ['palabra' => 'saber', 'sinonimo' => 'informarse'],
+            // Nuevos sinónimos para Verbos Comunes
+            ['palabra' => 'cambiar', 'sinonimo' => 'modificar'],
+            ['palabra' => 'cambiar', 'sinonimo' => 'reemplazar'],
+            ['palabra' => 'crear', 'sinonimo' => 'generar'],
+            ['palabra' => 'crear', 'sinonimo' => 'hacer'],
+            ['palabra' => 'enviar', 'sinonimo' => 'mandar'],
+            ['palabra' => 'recibir', 'sinonimo' => 'obtener'],
 
             // --- ADJETIVOS COMUNES ---
             ['palabra' => 'bueno', 'sinonimo' => 'excelente'],
@@ -160,6 +229,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'facil', 'sinonimo' => 'simple'],
             ['palabra' => 'dificil', 'sinonimo' => 'complicado'],
             ['palabra' => 'dificil', 'sinonimo' => 'complejo'],
+            // Nuevos sinónimos para Adjetivos Comunes
+            ['palabra' => 'grande', 'sinonimo' => 'mayor'],
+            ['palabra' => 'pequeño', 'sinonimo' => 'menor'],
+            ['palabra' => 'importante', 'sinonimo' => 'relevante'],
+            ['palabra' => 'nuevo', 'sinonimo' => 'reciente'],
+            ['palabra' => 'antiguo', 'sinonimo' => 'viejo'],
+            ['palabra' => 'general', 'sinonimo' => 'comun'],
 
             // --- CORRECCIONES ORTOGRÁFICAS COMUNES ---
             ['palabra' => 'probelema', 'sinonimo' => 'problema'],
@@ -176,6 +252,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'documneto', 'sinonimo' => 'documento'],
             ['palabra' => 'informacion', 'sinonimo' => 'informacion'],
             ['palabra' => 'informcion', 'sinonimo' => 'informacion'],
+            // Nuevas correcciones ortográficas
+            ['palabra' => 'conferecnia', 'sinonimo' => 'conferencia'],
+            ['palabra' => 'talleer', 'sinonimo' => 'taller'],
+            ['palabra' => 'solucionn', 'sinonimo' => 'solucion'],
+            ['palabra' => 'ussuario', 'sinonimo' => 'usuario'],
+            ['palabra' => 'tecnolgia', 'sinonimo' => 'tecnologia'],
+            ['palabra' => 'compuadora', 'sinonimo' => 'computadora'],
         ];
 
         foreach ($synonyms as $synonym) {
