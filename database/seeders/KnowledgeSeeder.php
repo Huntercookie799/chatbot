@@ -1060,4 +1060,4 @@ class KnowledgeSeeder extends Seeder {
         // (Aquí iría la ejecución, pero como el código es solo el método run, ya está implícito en los bloques de arriba)
         
     }
-}
+} 
