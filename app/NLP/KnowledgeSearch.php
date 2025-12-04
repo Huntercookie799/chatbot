@@ -6,7 +6,7 @@ use App\Models\KnowledgeItem;
 
 class KnowledgeSearch {
     public function search($tokens) {
-        $results = KnowledgeItem::query();
+        $results = KnowledgeItem::with('media');
 
         foreach ($tokens as $t) {
             $results->orWhere('titulo', 'LIKE', "%$t%")
