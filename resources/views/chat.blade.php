@@ -6,7 +6,7 @@
     <title>Chatbot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    @vite(['resources/css/chat.css'])
+    <link rel="stylesheet" href="{{ asset('css/chat.css') }}">
 </head>
 <body>
 
@@ -58,8 +58,8 @@
             </p>
         </div>
     </div>
-    @vite(['resources/js/chat.js'])
 
+    <script src="{{ asset('js/chat.js') }}"></script>
 </body>
 </html>
 

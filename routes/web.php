@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\KnowledgeItem;
 
 Route::get('/', function () {
     return redirect('/chatbot');
