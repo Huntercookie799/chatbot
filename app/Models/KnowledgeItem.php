@@ -12,4 +12,9 @@ class KnowledgeItem extends Model
     {
         return $this->hasMany(Keyword::class, 'item_id');
     }
+
+    public function media()
+    {
+        return $this->hasMany(Media::class, 'item_id');
+    }
 }

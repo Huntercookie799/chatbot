@@ -41,10 +41,10 @@ function sendMessage() {
 function addMessage(text, type, options = {}) {
     const msgDiv = document.createElement('div');
     msgDiv.classList.add("message");
-    
+
     if (type === "user") {
         msgDiv.classList.add("user-message");
-        msgDiv.innerHTML = `<div class="message-content">${text}</div>`;
+        msgDiv.innerHTML = `<div class="message-content">${text}</div><br>`;
     } else if (type === "alert") {
         msgDiv.classList.add("chat-message");
         msgDiv.innerHTML = `
@@ -61,8 +61,8 @@ function addMessage(text, type, options = {}) {
                 <i class="fa-solid fa-robot"></i>
             </div>
             <div class="message-content">
-                <div class="response-title">${options.title || 'Opción'}</div>
-                <div class="response-content">${text}</div>
+                <div class="response-title">${options.title || 'Opción'}</div><br>
+                <div class="response-content">${text}</div><br>
                 ${options.tags ? `<div class="response-tags">${options.tags}</div>` : ''}
             </div>
         `;
@@ -97,8 +97,8 @@ function showTypingIndicator(show) {
 async function sendToAPI(userQuery) {
     if (!userQuery) return;
 
-    showTypingIndicator(true);  
-    sendButton.disabled = true; 
+    showTypingIndicator(true);
+    sendButton.disabled = true;
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => {
@@ -116,17 +116,17 @@ async function sendToAPI(userQuery) {
         });
 
         clearTimeout(timeoutId);
-        
+
         if (!response.ok) {
             throw new Error(`Error HTTP: ${response.status}`);
         }
-        
+
         const data = await response.json();
         showTypingIndicator(false);
-        
+
         // Procesar la respuesta de la API
         processAPIResponse(data);
-        
+
     } catch (error) {
         showTypingIndicator(false);
         if (error.name === "AbortError") {
@@ -143,33 +143,37 @@ async function sendToAPI(userQuery) {
 function processAPIResponse(data) {
     // Mostrar información del análisis
     addMessage(`Sentimiento <strong>${data.sentiment}</strong> `, "chat");
-    
+
     // Mostrar resultados organizados
     if (data.resultados && data.resultados.length > 0) {
         addMessage("💬 Encontré estas opciones para ti. Selecciona la que prefieras:", "chat");
-        
+
         // Marcar el inicio de las opciones con un contenedor especial
         const optionsStartMarker = document.createElement('div');
         optionsStartMarker.classList.add('options-container-start');
         optionsStartMarker.style.display = 'none';
         messageArea.appendChild(optionsStartMarker);
-        
-        data.resultados.forEach((resultado, index) => {
+
+        data.resultados.forEach((resultado) => {
             const tagsArray = resultado.tags ? resultado.tags.split(', ') : [];
             const tagsHtml = tagsArray.map(tag => `<span class="tag">${tag}</span>`).join('');
-            
-            addMessage(resultado.contenido, "response", {
+
+            let mediaHtml = "";
+            if (resultado.media && resultado.media.length > 0) {
+                mediaHtml = renderMedia(resultado.media);
+            }
+
+            addMessage(resultado.contenido + mediaHtml, "response", {
                 id: resultado.id,
                 title: resultado.titulo,
-                tags: tagsHtml,
-                tipo: resultado.tipo,
-                created_at: resultado.created_at
+                tags: tagsHtml
             });
         });
+
     } else {
         addMessage("No encontré resultados específicos para tu consulta. ¿Puedes proporcionar más detalles?", "chat");
     }
-    
+
     // Mostrar tokens expandidos si existen
     if (data.expanded_tokens && data.expanded_tokens.length > 0) {
         const expandedTokens = data.expanded_tokens.join(', ');
@@ -182,7 +186,7 @@ function responseSelect(selectedElement, text, options) {
     // Encontrar todos los elementos de respuesta
     const allResponseElements = document.querySelectorAll('.clickable-response');
     const optionsStartMarker = document.querySelector('.options-container-start');
-    
+
     // Encontrar el índice del elemento seleccionado
     let selectedIndex = -1;
     allResponseElements.forEach((el, index) => {
@@ -190,7 +194,7 @@ function responseSelect(selectedElement, text, options) {
             selectedIndex = index;
         }
     });
-    
+
     // Remover todas las opciones excepto la seleccionada
     allResponseElements.forEach((el, index) => {
         if (el !== selectedElement) {
@@ -206,20 +210,20 @@ function responseSelect(selectedElement, text, options) {
             el.style.opacity = '1';
             el.style.transform = 'scale(1.02)';
             el.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-            
+
             // Hacer no clickeable después de seleccionar
             el.onclick = null;
             el.style.cursor = 'default';
         }
     });
-    
+
     // Remover el marcador de inicio de opciones
     if (optionsStartMarker) {
         optionsStartMarker.remove();
     }
-    
+
     // Remover el mensaje "Selecciona la que prefieras" si existe
-    const selectMessage = Array.from(document.querySelectorAll('.chat-message')).find(el => 
+    const selectMessage = Array.from(document.querySelectorAll('.chat-message')).find(el =>
         el.textContent.includes('Selecciona la que prefieras')
     );
     if (selectMessage) {
@@ -228,8 +232,51 @@ function responseSelect(selectedElement, text, options) {
             selectMessage.remove();
         }, 300);
     }
-    
-    
 }
+
+function renderMedia(mediaList) {
+    let html = `<div class="media-container">`;
+
+    mediaList.forEach(media => {
+        if (media.type === "image") {
+            html += `
+                <div class="media-item">
+                    <img src="storage/${media.path}" alt="${media.title || 'imagen'}" class="media-image">
+                </div>
+            `;
+        }
+        else if (media.type === "video") {
+            html += `
+                <div class="media-item">
+                    <video class="media-video" controls>
+                        <source src="storage/${media.path}">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+            `;
+        }
+        else if (media.type === "link") {
+            html += `
+                <div class="media-item">
+                    <a href="${media.path}" target="_blank" class="media-link">🔗${media.title || media.path}</a>
+                </div>
+            `;
+        }
+        else if (media.type === "audio") {
+            html += `
+                <div class="media-item">
+                    <audio controls>
+                        <source src="${media.path}">
+                        Tu navegador no soporta audio HTML5.
+                    </audio>
+                </div>
+            `;
+        }
+    });
+
+    html += `</div>`;
+    return html;
+}
+
 
 window.onload = adjustInputArea;

@@ -70,8 +70,6 @@
         .message-content {
             padding: 12px 20px;
             border-radius: 8px;
-            line-height: 1.6;
-            white-space: pre-wrap;
             font-size: 16px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             max-width: 85%;
@@ -289,6 +287,13 @@
         .message-area::-webkit-scrollbar-thumb:hover {
             background: #a8a8a8;
         }
+
+        .media-container { margin-top: 10px; }
+        .media-item { margin-bottom: 10px; }
+        .media-image { max-width: 100%; border-radius: 8px; }
+        .media-video { width: 100%; border-radius: 8px; }
+        .media-link { color: #1d72e8; font-weight: bold; }
+
         
         /* Video de fondo *//*
         #yt-bg {
