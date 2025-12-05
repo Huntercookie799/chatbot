@@ -33,6 +33,15 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'jornada', 'sinonimo' => 'sesion'],
             ['palabra' => 'programa', 'sinonimo' => 'horario'],
             ['palabra' => 'programa', 'sinonimo' => 'plan'],
+            ['palabra' => 'cita', 'sinonimo' => 'encuentro'],
+            ['palabra' => 'cita', 'sinonimo' => 'entrevista'],
+            ['palabra' => 'reunion', 'sinonimo' => 'junta'],
+            ['palabra' => 'sesion', 'sinonimo' => 'reunion'],
+            ['palabra' => 'presentacion', 'sinonimo' => 'exposicion'],
+            ['palabra' => 'clase', 'sinonimo' => 'leccion'],
+            ['palabra' => 'demostracion', 'sinonimo' => 'muestra'],
+            ['palabra' => 'webinar', 'sinonimo' => 'seminario web'],
+            ['palabra' => 'webinar', 'sinonimo' => 'conferencia en linea'],
 
             // --- INGENIERÍA Y TECNOLOGÍA ---
             ['palabra' => 'ingenieria', 'sinonimo' => 'ingenieril'],
@@ -53,6 +62,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'dispositivo', 'sinonimo' => 'terminal'],
             ['palabra' => 'desarrollo', 'sinonimo' => 'programacion'],
             ['palabra' => 'desarrollo', 'sinonimo' => 'creacion'],
+            ['palabra' => 'redes', 'sinonimo' => 'conectividad'],
+            ['palabra' => 'servidor', 'sinonimo' => 'host'],
+            ['palabra' => 'base de datos', 'sinonimo' => 'bd'],
+            ['palabra' => 'algoritmo', 'sinonimo' => 'logica'],
+            ['palabra' => 'codigo', 'sinonimo' => 'script'],
+            ['palabra' => 'programacion', 'sinonimo' => 'codificacion'],
+            ['palabra' => 'internet', 'sinonimo' => 'web'],
 
             // --- PROBLEMAS Y SOLUCIONES ---
             ['palabra' => 'problema', 'sinonimo' => 'dificultad'],
@@ -73,6 +89,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'arreglo', 'sinonimo' => 'reparacion'],
             ['palabra' => 'solucionar', 'sinonimo' => 'resolver'],
             ['palabra' => 'incidente', 'sinonimo' => 'problema'],
+            ['palabra' => 'incidencia', 'sinonimo' => 'problema'],
+            ['palabra' => 'fallo', 'sinonimo' => 'bug'],
+            ['palabra' => 'diagnostico', 'sinonimo' => 'analisis'],
+            ['palabra' => 'mantenimiento', 'sinonimo' => 'soporte tecnico'],
+            ['palabra' => 'soporte', 'sinonimo' => 'ayuda'],
+            ['palabra' => 'reclamacion', 'sinonimo' => 'queja'],
+            ['palabra' => 'averia', 'sinonimo' => 'danio'],
 
             // --- TIEMPO Y FECHAS ---
             ['palabra' => 'fecha', 'sinonimo' => 'dia'],
@@ -91,6 +114,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'actual', 'sinonimo' => 'presente'],
             ['palabra' => 'anterior', 'sinonimo' => 'pasado'],
             ['palabra' => 'proximo', 'sinonimo' => 'siguiente'],
+            ['palabra' => 'vencimiento', 'sinonimo' => 'caducidad'],
+            ['palabra' => 'periodo', 'sinonimo' => 'lapso'],
+            ['palabra' => 'semanal', 'sinonimo' => 'cada semana'],
+            ['palabra' => 'mensual', 'sinonimo' => 'cada mes'],
+            ['palabra' => 'anual', 'sinonimo' => 'cada anio'],
+            ['palabra' => 'rapido', 'sinonimo' => 'veloz'],
+            ['palabra' => 'inmediato', 'sinonimo' => 'ahora'],
 
             // --- LUGARES Y UBICACIONES ---
             ['palabra' => 'lugar', 'sinonimo' => 'ubicacion'],
@@ -107,6 +137,14 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'area', 'sinonimo' => 'zona'],
             ['palabra' => 'piso', 'sinonimo' => 'planta'],
             ['palabra' => 'entrada', 'sinonimo' => 'acceso'],
+            ['palabra' => 'sede', 'sinonimo' => 'central'],
+            ['palabra' => 'matriz', 'sinonimo' => 'sede principal'],
+            ['palabra' => 'filial', 'sinonimo' => 'sucursal'],
+            ['palabra' => 'sala', 'sinonimo' => 'habitacion'],
+            ['palabra' => 'aula', 'sinonimo' => 'salon de clases'],
+            ['palabra' => 'laboratorio', 'sinonimo' => 'lab'],
+            ['palabra' => 'externo', 'sinonimo' => 'fuera'],
+            ['palabra' => 'interno', 'sinonimo' => 'dentro'],
 
             // --- PERSONAS Y CONTACTOS ---
             ['palabra' => 'persona', 'sinonimo' => 'individuo'],
@@ -126,6 +164,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'personal', 'sinonimo' => 'trabajador'],
             ['palabra' => 'jefe', 'sinonimo' => 'supervisor'],
             ['palabra' => 'jefe', 'sinonimo' => 'encargado'],
+            ['palabra' => 'colega', 'sinonimo' => 'companiero'],
+            ['palabra' => 'empleado', 'sinonimo' => 'colaborador'],
+            ['palabra' => 'asesor', 'sinonimo' => 'consultor'],
+            ['palabra' => 'director', 'sinonimo' => 'gerente'],
+            ['palabra' => 'equipo', 'sinonimo' => 'staff'],
+            ['palabra' => 'alumnos', 'sinonimo' => 'estudiantes'],
+            ['palabra' => 'usuario', 'sinonimo' => 'user'],
 
             // --- ACADÉMICO Y EDUCACIÓN ---
             ['palabra' => 'universidad', 'sinonimo' => 'universitario'],
@@ -145,6 +190,12 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'inscripcion', 'sinonimo' => 'registro'],
             ['palabra' => 'investigacion', 'sinonimo' => 'estudio'],
             ['palabra' => 'investigacion', 'sinonimo' => 'analisis'],
+            ['palabra' => 'tesis', 'sinonimo' => 'proyecto final'],
+            ['palabra' => 'departamento', 'sinonimo' => 'area'],
+            ['palabra' => 'semestre', 'sinonimo' => 'periodo'],
+            ['palabra' => 'programa academico', 'sinonimo' => 'curricula'],
+            ['palabra' => 'maestria', 'sinonimo' => 'postgrado'],
+            ['palabra' => 'doctorado', 'sinonimo' => 'phd'],
 
             // --- DOCUMENTOS Y ARCHIVOS ---
             ['palabra' => 'documento', 'sinonimo' => 'archivo'],
@@ -161,6 +212,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'expediente', 'sinonimo' => 'registro'],
             ['palabra' => 'copia', 'sinonimo' => 'ejemplar'],
             ['palabra' => 'descarga', 'sinonimo' => 'bajar'],
+            ['palabra' => 'poliza', 'sinonimo' => 'seguro'],
+            ['palabra' => 'contrato', 'sinonimo' => 'acuerdo'],
+            ['palabra' => 'factura', 'sinonimo' => 'recibo'],
+            ['palabra' => 'recibo', 'sinonimo' => 'comprobante'],
+            ['palabra' => 'archivar', 'sinonimo' => 'guardar'],
+            ['palabra' => 'pdf', 'sinonimo' => 'documento'],
+            ['palabra' => 'adjunto', 'sinonimo' => 'anexo'],
 
             // --- SISTEMAS Y REDES ---
             ['palabra' => 'sistema', 'sinonimo' => 'plataforma'],
@@ -179,6 +237,13 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'cuenta', 'sinonimo' => 'perfil'],
             ['palabra' => 'navegador', 'sinonimo' => 'browser'],
             ['palabra' => 'enlace', 'sinonimo' => 'link'],
+            ['palabra' => 'conexion', 'sinonimo' => 'enlace'],
+            ['palabra' => 'router', 'sinonimo' => 'modem'],
+            ['palabra' => 'seguridad', 'sinonimo' => 'proteccion'],
+            ['palabra' => 'firewall', 'sinonimo' => 'cortafuegos'],
+            ['palabra' => 'nube', 'sinonimo' => 'cloud'],
+            ['palabra' => 'datos', 'sinonimo' => 'informacion'],
+            ['palabra' => 'actualizar', 'sinonimo' => 'refrescar'],
 
             // --- ESTADOS Y CONDICIONES ---
             ['palabra' => 'activo', 'sinonimo' => 'activado'],
@@ -194,6 +259,14 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'disponible', 'sinonimo' => 'accesible'],
             ['palabra' => 'agotado', 'sinonimo' => 'vendido'],
             ['palabra' => 'agotado', 'sinonimo' => 'terminado'],
+            ['palabra' => 'habilitado', 'sinonimo' => 'activado'],
+            ['palabra' => 'deshabilitado', 'sinonimo' => 'inactivo'],
+            ['palabra' => 'procesando', 'sinonimo' => 'en curso'],
+            ['palabra' => 'completado', 'sinonimo' => 'listo'],
+            ['palabra' => 'fallido', 'sinonimo' => 'erroneo'],
+            ['palabra' => 'obsoleto', 'sinonimo' => 'antiguo'],
+            ['palabra' => 'nuevo', 'sinonimo' => 'fresco'],
+            ['palabra' => 'en linea', 'sinonimo' => 'conectado'],
 
             // --- VERBOS COMUNES ---
             ['palabra' => 'buscar', 'sinonimo' => 'encontrar'],
@@ -213,6 +286,16 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'crear', 'sinonimo' => 'hacer'],
             ['palabra' => 'enviar', 'sinonimo' => 'mandar'],
             ['palabra' => 'recibir', 'sinonimo' => 'obtener'],
+            ['palabra' => 'gestionar', 'sinonimo' => 'administrar'],
+            ['palabra' => 'administrar', 'sinonimo' => 'manejar'],
+            ['palabra' => 'confirmar', 'sinonimo' => 'validar'],
+            ['palabra' => 'cancelar', 'sinonimo' => 'anular'],
+            ['palabra' => 'iniciar', 'sinonimo' => 'empezar'],
+            ['palabra' => 'finalizar', 'sinonimo' => 'terminar'],
+            ['palabra' => 'subir', 'sinonimo' => 'upload'],
+            ['palabra' => 'bajar', 'sinonimo' => 'download'],
+            ['palabra' => 'ingresar', 'sinonimo' => 'entrar'],
+            ['palabra' => 'salir', 'sinonimo' => 'logout'],
 
             // --- ADJETIVOS COMUNES ---
             ['palabra' => 'bueno', 'sinonimo' => 'excelente'],
@@ -231,17 +314,25 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'dificil', 'sinonimo' => 'complejo'],
             // Nuevos sinónimos para Adjetivos Comunes
             ['palabra' => 'grande', 'sinonimo' => 'mayor'],
-            ['palabra' => 'pequeño', 'sinonimo' => 'menor'],
+            ['palabra' => 'pequeno', 'sinonimo' => 'menor'],
             ['palabra' => 'importante', 'sinonimo' => 'relevante'],
             ['palabra' => 'nuevo', 'sinonimo' => 'reciente'],
             ['palabra' => 'antiguo', 'sinonimo' => 'viejo'],
             ['palabra' => 'general', 'sinonimo' => 'comun'],
+            ['palabra' => 'esencial', 'sinonimo' => 'vital'],
+            ['palabra' => 'critico', 'sinonimo' => 'urgente'],
+            ['palabra' => 'opcional', 'sinonimo' => 'secundario'],
+            ['palabra' => 'primario', 'sinonimo' => 'principal'],
+            ['palabra' => 'secundario', 'sinonimo' => 'acceso'],
+            ['palabra' => 'digital', 'sinonimo' => 'electronico'],
+            ['palabra' => 'fisico', 'sinonimo' => 'impreso'],
+            ['palabra' => 'gratuito', 'sinonimo' => 'libre'],
 
             // --- CORRECCIONES ORTOGRÁFICAS COMUNES ---
             ['palabra' => 'probelema', 'sinonimo' => 'problema'],
             ['palabra' => 'probrema', 'sinonimo' => 'problema'],
             ['palabra' => 'ingeneria', 'sinonimo' => 'ingenieria'],
-            ['palabra' => 'ingenieria', 'sinonimo' => 'ingenieria'],
+            ['palabra' => 'ingenieria', 'sinonimo' => 'ingenieria'], // Duplicado de la original, la mantengo si acaso
             ['palabra' => 'eveneto', 'sinonimo' => 'evento'],
             ['palabra' => 'evneto', 'sinonimo' => 'evento'],
             ['palabra' => 'sistemas', 'sinonimo' => 'sistema'],
@@ -250,7 +341,7 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'univercidad', 'sinonimo' => 'universidad'],
             ['palabra' => 'documeto', 'sinonimo' => 'documento'],
             ['palabra' => 'documneto', 'sinonimo' => 'documento'],
-            ['palabra' => 'informacion', 'sinonimo' => 'informacion'],
+            ['palabra' => 'informacion', 'sinonimo' => 'informacion'], // Duplicado de la original, la mantengo si acaso
             ['palabra' => 'informcion', 'sinonimo' => 'informacion'],
             // Nuevas correcciones ortográficas
             ['palabra' => 'conferecnia', 'sinonimo' => 'conferencia'],
@@ -259,10 +350,16 @@ class SynonymSeeder extends Seeder {
             ['palabra' => 'ussuario', 'sinonimo' => 'usuario'],
             ['palabra' => 'tecnolgia', 'sinonimo' => 'tecnologia'],
             ['palabra' => 'compuadora', 'sinonimo' => 'computadora'],
+            ['palabra' => 'tecnolojia', 'sinonimo' => 'tecnologia'],
+            ['palabra' => 'profesorr', 'sinonimo' => 'profesor'],
+            ['palabra' => 'accesoo', 'sinonimo' => 'acceso'],
+            ['palabra' => 'dirección', 'sinonimo' => 'direccion'], // Corrige acento
+            ['palabra' => 'mantenimeinto', 'sinonimo' => 'mantenimiento'],
         ];
 
         foreach ($synonyms as $synonym) {
-            Synonym::create($synonym);
+            // Asegura que no se cree si ya existe un par idéntico (aunque la revisión manual minimiza esto)
+            Synonym::firstOrCreate($synonym); 
         }
     }
-} 
+}
