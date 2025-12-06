@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Synonym;
+use Illuminate\Support\Facades\DB;
 
 class SynonymSeeder extends Seeder {
     /**
@@ -13,6 +14,7 @@ class SynonymSeeder extends Seeder {
      */
     public function run() 
     {
+        DB::table('synonyms')->truncate();
         $synonyms = [
             // --- EVENTOS Y ACTIVIDADES ---
             ['palabra' => 'evento', 'sinonimo' => 'actividad'],
